@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-cp ./.vimrc ~/.vimrc
+if [ -e ~/.vimrc ]; then
+	mv ~/.vimrc ~/.vimrc.old
+fi
+
+#cp ./.vimrc ~/.vimrc
+ln -s `pwd`/.vimrc ~/.vimrc
 
 mkdir -p ~/.vim/after
 cp -R ./.vim/after ~/.vim/

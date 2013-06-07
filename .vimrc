@@ -49,3 +49,6 @@ autocmd vimenter * NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 " }}}
 
+"{{{ .vimrc editing
+nnoremap <leader>` :e ~/.vimrc<CR>
+"}}}
