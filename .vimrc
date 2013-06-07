@@ -53,3 +53,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>e<leader> :tabf $MYVIMRC<CR>
 nnoremap <leader>s<leader> :source $MYVIMRC<CR>
 "}}}
+
+"{{{ Git (fugitive) mappings
+nnoremap <leader>gs :Gstatus<CR>
+"}}}
