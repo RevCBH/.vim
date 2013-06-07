@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/vim-unimpared"]
 	path = .vim/bundle/vim-unimpared
 	url = git://github.com/tpope/vim-unimpaired.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
