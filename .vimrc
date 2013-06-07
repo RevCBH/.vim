@@ -50,5 +50,6 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 " }}}
 
 "{{{ .vimrc editing
-nnoremap <leader>` :e ~/.vimrc<CR>
+nnoremap <leader>e<leader> :tabf $MYVIMRC<CR>
+nnoremap <leader>s<leader> :source $MYVIMRC<CR>
 "}}}
