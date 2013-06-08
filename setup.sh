@@ -4,8 +4,12 @@ if [ -e ~/.vimrc ]; then
 	mv ~/.vimrc ~/.vimrc.old
 fi
 
-#cp ./.vimrc ~/.vimrc
+if [ -e ~/.gvimrc ]; then
+	mv ~/.vimrc ~/.vimrc.old
+fi
+
 ln -s `pwd`/.vimrc ~/.vimrc
+ln -s `pwd`/.gvimrc ~/.givmrc
 
 mkdir -p ~/.vim/after
 cp -R ./.vim/after ~/.vim/

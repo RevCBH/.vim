@@ -7,6 +7,9 @@ set smarttab
 set nojoinspaces
 set hidden
 
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " coffeescript {{{
 au BufWritePost *.coffee silent CoffeeMake! -o tmp/trash | cwindow
