@@ -5,11 +5,11 @@ if [ -e ~/.vimrc ]; then
 fi
 
 if [ -e ~/.gvimrc ]; then
-	mv ~/.vimrc ~/.vimrc.old
+	mv ~/.gvimrc ~/.gvimrc.old
 fi
 
 ln -s `pwd`/.vimrc ~/.vimrc
-ln -s `pwd`/.gvimrc ~/.givmrc
+ln -s `pwd`/.gvimrc ~/.gvimrc
 
 mkdir -p ~/.vim/after
 cp -R ./.vim/after ~/.vim/
