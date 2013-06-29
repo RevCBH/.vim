@@ -11,6 +11,8 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+au BufRead,BufNewFile *.tjade set filetype=jade
+
 " coffeescript {{{
 au BufWritePost *.coffee silent CoffeeMake! -o tmp/trash | cwindow
 " }}}
