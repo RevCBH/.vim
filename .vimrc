@@ -13,6 +13,10 @@ python del powerline_setup
 
 au BufRead,BufNewFile *.tjade set filetype=jade
 
+" buffer dancing {{{
+noremap <leader>b <C-^>
+" }}}
+
 " coffeescript {{{
 au BufWritePost *.coffee silent CoffeeMake! -o tmp/trash | cwindow
 " }}}
