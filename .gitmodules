@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/vim-scala"]
 	path = .vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule ".vim/bundle/Floobits"]
+	path = .vim/bundle/Floobits
+	url = git@github.com:Floobits/floobits-vim.git

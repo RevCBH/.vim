@@ -15,6 +15,7 @@ au BufRead,BufNewFile *.tjade set filetype=jade
 
 " buffer dancing {{{
 noremap <leader>b <C-^>
+noremap <leader>B :CtrlPBuffer<CR>
 " }}}
 
 " coffeescript {{{
@@ -29,14 +30,14 @@ inoremap <ESC> <NOP>
 " }}}
 
 " Consistent line indenting across modes {{{
-inoremap <M-]> <C-T>
-inoremap <M-[> <C-D>
+imap <D-]> <C-T>
+imap <D-[> <C-D>
 
-vnoremap <M-]> >
-vnoremap <M-[> <
+vnoremap <D-]> >
+vnoremap <D-[> <
 
-nnoremap <M-]> >>
-nnoremap <M-[> <<
+nnoremap <D-]> >>
+nnoremap <D-[> <<
 " }}}
 
 " Search improvements {{{
@@ -65,4 +66,8 @@ nnoremap <leader>s<leader> :source $MYVIMRC<CR>
 
 "{{{ Git (fugitive) mappings
 nnoremap <leader>gs :Gstatus<CR>
+"}}}
+
+"{{{ Commmenting hotkeys
+nmap <D-/> <leader>c<space><CR>k
 "}}}
