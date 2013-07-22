@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/Floobits"]
 	path = .vim/bundle/Floobits
 	url = git@github.com:Floobits/floobits-vim.git
+[submodule ".vim/bundle/vim-protobuf"]
+	path = .vim/bundle/vim-protobuf
+	url = git@github.com:uarun/vim-protobuf.git

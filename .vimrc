@@ -69,5 +69,6 @@ nnoremap <leader>gs :Gstatus<CR>
 "}}}
 
 "{{{ Commmenting hotkeys
-nmap <D-/> <leader>c<space><CR>k
+nmap <D-/> mp<leader>c<space><CR>`p
+imap <D-/> jkmp<leader>c<space><CR>`pi
 "}}}
