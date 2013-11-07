@@ -4,14 +4,22 @@ filetype plugin indent on
 
 colorscheme vividchalk
 set smarttab
+set tabstop=4
 set nojoinspaces
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 set hidden
+set backupdir=~/.tmp
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+set wildignore+=*.class,*.journal
+
 au BufRead,BufNewFile *.tjade set filetype=jade
+au BufRead,BufNewFile *.rb set smarttab nojoinspaces softtabstop=2 shiftwidth=2 expandtab
 
 " buffer dancing {{{
 noremap <leader>b <C-^>
@@ -25,7 +33,7 @@ au BufWritePost *.coffee silent CoffeeMake! -o tmp/trash | cwindow
 " Edit-fu {{{
 inoremap jk <ESC>l
 vnoremap jk <ESC>l
-inoremap <ESC> <NOP>
+"inoremap <ESC> <NOP>
 "inoremap g; ,
 " }}}
 
@@ -70,5 +78,20 @@ nnoremap <leader>gs :Gstatus<CR>
 
 "{{{ Commmenting hotkeys
 nmap <D-/> mp<leader>c<space><CR>`p
-imap <D-/> jkmp<leader>c<space><CR>`pi
+imap <d-/> jkmp<leader>c<space><cr>`pi
+vmap <D-/> <leader>c<space><cr>gv
 "}}}
+
+" {{{ Twiddle case
+function! TwiddleCase(str)
+  if a:str ==# toupper(a:str)
+    let result = tolower(a:str)
+  elseif a:str ==# tolower(a:str)
+    let result = substitute(a:str,'\(\<\w\+\>\)', '\u\1', 'g')
+  else
+    let result = toupper(a:str)
+  endif
+  return result
+endfunction
+vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
+" }}}
