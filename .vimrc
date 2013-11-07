@@ -10,7 +10,10 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set hidden
-set backupdir=~/.tmp
+
+set backupdir=~/.tmp//,.
+set directory=~/.tmp//,.
+set undodir=~/.tmp//,.
 
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
