@@ -65,6 +65,17 @@ augroup filetype_vim
 augroup END
 " }}}
 
+" Scala folding {{{
+au BufRead,BufNewFile *.scala set foldmethod=indent foldnestmax=10 nofoldenable foldlevel=1
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+" }}}
+
+" Tab completion improvements {{{
+set wildmode=list:longest
+" set wildignore=*.o,*.obj,*~
+" }}}
+
 " NerdTree {{{
 autocmd vimenter * NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
@@ -77,6 +88,7 @@ nnoremap <leader>s<leader> :source $MYVIMRC<CR>
 
 "{{{ Git (fugitive) mappings
 nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader><leader>/ :Ggrep
 "}}}
 
 "{{{ Commmenting hotkeys
