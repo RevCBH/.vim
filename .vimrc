@@ -15,9 +15,9 @@ set backupdir=~/.tmp//,.
 set directory=~/.tmp//,.
 set undodir=~/.tmp//,.
 
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 
 set wildignore+=*.class,*.journal
 
