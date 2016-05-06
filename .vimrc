@@ -110,3 +110,8 @@ function! TwiddleCase(str)
 endfunction
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))<CR>gv""Pgv
 " }}}
+
+" {{{ Pane sizing
+noremap <leader>+ :resize +100<CR>
+noremap <leader>ww <C-w><C-w> :resize+100<CR>
+" }}}
