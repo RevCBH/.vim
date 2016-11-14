@@ -23,6 +23,7 @@ set wildignore+=*.class,*.journal
 
 au BufRead,BufNewFile *.tjade set filetype=jade
 au BufRead,BufNewFile *.rb set smarttab nojoinspaces softtabstop=2 shiftwidth=2 expandtab
+au BufWrite *.tf TerraformFmt
 
 " buffer dancing {{{
 noremap <leader>b <C-^>
